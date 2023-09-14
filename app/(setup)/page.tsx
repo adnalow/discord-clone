@@ -24,7 +24,7 @@ const SetupPage = async () => {
     }
 
 
-    return  <InitialModal />;
+    return  <InitialModal/>;
 }
  
 export default SetupPage;
