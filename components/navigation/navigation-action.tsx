@@ -26,7 +26,6 @@ export const NavigationAction = () => {
                             className="group-hover:text-white transition text-emerald-500"
                             size ={25}
                         />
-
                     </div>
                 </button>
             </Actiontooltip>
