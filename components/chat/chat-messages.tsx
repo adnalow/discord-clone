@@ -9,6 +9,9 @@ import { useChatQuery } from "@/hooks/use-chat-query";
 import { Loader2, ServerCrash } from "lucide-react";
 import { ChatItem } from "./chat-item";
 
+
+const DATE_FORMAT = "d MMM yyyy, HH:mm";
+
 type MessageMemberWithProfile = Message & {
     member: Member & {
         profile: Profile
@@ -89,10 +92,14 @@ export const ChatMessages = ({
                                 key={message.id}
                                 id={message.id}
                                 currentMember={member}
+                                member={message.member}
                                 content={message.content}
                                 fileUrl={message.fileUrl}
                                 deleted={message.deleted}
-                                timestamp={}
+                                timestamp={format(new Date(message.createdAt), DATE_FORMAT)}
+                                isUpdated={message.updatedAt !== message.createdAt}
+                                socketUrl={socketUrl}
+                                socketQuery={socketQuery}
                             />
                         ))}
                     </Fragment>
