@@ -10,7 +10,7 @@ import { Loader2, ServerCrash } from "lucide-react";
 import { ChatItem } from "./chat-item";
 
 
-const DATE_FORMAT = "d MMM yyyy, HH:mm";
+const DATE_FORMAT = "dd MMM yyyy, HH:mm:";
 
 type MessageMemberWithProfile = Message & {
     member: Member & {
