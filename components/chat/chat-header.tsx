@@ -1,4 +1,4 @@
-import { Hash } from "lucide-react";
+import { Github, Hash } from "lucide-react";
 
 import { MobileToggle } from "@/components/mobile-toggle";
 import { UserAvatar } from "@/components/user-avatar";
@@ -33,6 +33,10 @@ export const ChatHeader = ({
                 {name}
             </p>
             <div className="ml-auto flex items-center">
+                <Github className=" text-green-500"/>
+                <p className="font-semibold text-sm hover:underline cursor-pointer">
+                    https://github.com/adnalow
+                </p>
                 <SocketIndicator />
             </div>
         </div>
